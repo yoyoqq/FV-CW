@@ -1,0 +1,22 @@
+1. Build a model M1 for the counter that counts from 0 to 7 (that is, a counter
+modulo 8) with binary variables in GCLang. Use as few variables as
+possible. The initial state (start state) of your model is the state where the
+counter is 0.
+
+2. Write an initial set of up to 4 CTL properties to verify your model. Argue
+that the set represents the intuitive specification of what we can expect
+from the counter. For each property, indicate whether it is a safety property
+or a liveness property and explain why.
+
+3. Change the model so that it has two initial states: one where the counter is
+0 and another where the counter is 7. Write the new model M2 in GCLang.
+
+4. Prove that M2 has two initial states by writing 2 new properties and
+showing the result of their execution on the model (the result should imply
+the existence of two initial states).
+
+5. Introduce a bug in your original model M1 that is not caught by any of the
+properties.
+
+6. Explain why this happened and write an additional property that exposes
+this bug. Demonstrate a counterexample.
