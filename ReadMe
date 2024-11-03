@@ -1,3 +1,6 @@
+Formal Verification Project Modulo 8 counter modeled in GCLang
+
+
 1. Build a model M1 for the counter that counts from 0 to 7 (that is, a counter
 modulo 8) with binary variables in GCLang. Use as few variables as
 possible. The initial state (start state) of your model is the state where the
