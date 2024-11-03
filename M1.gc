@@ -1,0 +1,49 @@
+NAME M1 
+
+VAR
+  bit1   : boolean;
+  bit2   : boolean;
+  bit3   : boolean;
+
+INIT
+ !bit1 & !bit2 & !bit3;
+
+RULES
+
+-- 0 to 1
+!bit1 & !bit2 & !bit3:
+  bit1 := true
+
+-- 1 to 2
+bit1 & !bit2 & !bit3:
+  bit1 := false;
+  bit2 := true
+
+-- 2 to 3
+!bit1 & bit2 & !bit3:
+  bit1 := true
+
+-- 3 to 4
+bit1 & bit2 & !bit3:
+  bit1 := false;
+  bit2 := false;
+  bit3 := true
+
+-- 4 to 5
+!bit1 & !bit2 & bit3:
+  bit1 := true
+
+-- 5 to 6
+bit1 & !bit2 & bit3:
+  bit1 := false;
+  bit2 := true
+
+-- 6 to 7
+!bit1 & bit2 & bit3:
+  bit1 := true
+
+-- 7 to 0
+bit1 & bit2 & bit3:
+  bit1 := false;
+  bit2 := false;
+  bit3 := false

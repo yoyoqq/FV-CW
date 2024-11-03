@@ -1,0 +1,31 @@
+Question 2:
+File name: M1.gc
+
+AG ((bit1 ->AX(!bit1)) | (bit2 -> AX(!bit2)) | (bit3 -> AX(!bit3)))
+AG((bit1 & bit2 & bit3) -> AX(!bit1 & !bit2 & !bit3))
+AG((!bit1 & !bit2 & !bit3) -> AF(bit1 & bit2 & bit3))
+AG ((!bit3 & !bit2 & bit1) -> AX(!bit3 & bit2 & !bit1))
+
+------------------------------------------------------------
+Question 4
+File Name: M1_&_M2.gc
+
+AF(¬bit1∧¬bit2∧¬bit3) 
+AF(bit1∧bit2∧bit3) 
+
+
+------------------------------------------------------------
+Question 6        
+File Name: M3.gc	(returns false as the model has a bug)
+
+AG ((!bit1 & !bit2 & !bit3) -> 
+	(  
+	AF (!bit1 & !bit2 & bit3) & 
+	AF (!bit1 & bit2 & !bit3) & 
+	AF (!bit1 & bit2 & bit3) & 
+	AF (bit1 & !bit2 & !bit3) & 
+	AF (bit1 & !bit2 & bit3) & 
+	AF (bit1 & bit2 & !bit3) & 
+	AF (bit1 & bit2 & bit3)  
+	) 
+) 
